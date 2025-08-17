@@ -1,0 +1,69 @@
+:root {
+    /* Polices */
+    --font-family-title: "Fraunces", serif;
+    --font-family-main: "Roboto", sans-serif;
+    
+    /* Thème clair (par défaut) */
+    --bg-color: #fff8f0;
+    --bg-secondary: #beb0b0;
+    --main-color: #353a47;
+    --other-color: #137b9e;
+    --accent-color: #e63946;
+}
+
+/* Thème sombre */
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --bg-secondary: #353a47;
+    --main-color: #fff8f0;
+    --other-color: #137b9e;
+    --accent-color: #e63946;
+}
+
+/* Auto-détection selon les préférences système */
+@media (prefers-color-scheme: dark) {
+    :root {
+    --bg-color: #1a1a1a;
+    --bg-secondary: #353a47;
+    --main-color: #fff8f0;
+    --other-color: #137b9e;
+    --accent-color: #e63946;
+    }
+}
+
+/* Override si data-theme="light" est explicitement défini */
+[data-theme="light"] {
+    --bg-color: #fff8f0;
+    --bg-secondary: #beb0b0;
+    --main-color: #353a47;
+    --other-color: #137b9e;
+    --accent-color: #e63946;
+}
+
+body {
+    font-family: var(--font-family-main);
+    background-color: var(--bg-color);
+    color: var(--main-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-family-title);
+}
+
+h1 {
+    color: var(--accent-color);
+}
+
+h2, h3 {
+    color: var(--main-color);
+}
+
+button {
+    background: var(--bg-color);
+    color: var(--accent-color);
+}
+
+button:active {
+    border: none;
+}

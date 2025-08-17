@@ -1,16 +1,14 @@
 <script setup lang="ts">
-import Hero from './components/Hero.vue'
-import navbar from './components/navbar.vue';
+import Hero from "./components/Hero.vue";
+import Navbar from "./components/Navbar.vue";
 </script>
 
 <template>
+  <Navbar />
 
-  <navbar />
- 
   <Hero />
-  
 </template>
 
-<style scoped>
-
+<style lang="scss">
+@use "./assets/base.scss" as *;
 </style>
