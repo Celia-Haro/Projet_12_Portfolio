@@ -1,0 +1,103 @@
+{
+    "hero": {
+        "name": "Célia Haro",
+        "role": "Front-end Web Developer, Web Scraping",
+        "location": "Based near Nantes – Available to collaborate on your web projects"
+    },
+    "about": {
+        "title": "About",
+        "text1": "The web and computer science have always sparked my curiosity. In March 2024, I decided to turn interest into action by joining the Web Integrator program at OpenClassrooms.",
+        "text2": "This journey takes place as a work-study at [Company Name], which allows me to combine theoretical learning with hands-on practice: creating interfaces, optimizing user experiences, understanding client needs, and developing tailored solutions.",
+        "text3": "Every new project is an opportunity to learn, experiment, and push my limits. Curious and detail-oriented, I put my energy and attention to detail into delivering web solutions that are both effective and engaging."
+    },
+    "projects": {
+        "title": "Projects",
+        "training": {
+            "title": "Training Projects (OpenClassrooms – Web Integrator)",
+            "items": [
+                {
+                    "name": "Booki",
+                    "stack": "HTML, CSS",
+                    "description": "Responsive integration of a travel agency website based on a Figma mockup."
+                },
+                {
+                    "name": "Ohmyfood",
+                    "stack": "SASS, mobile-first",
+                    "description": "Improved the mobile interface of a restaurant website with CSS animations."
+                },
+                {
+                    "name": "Portfolio Sophie Bluel",
+                    "stack": "JavaScript, API",
+                    "description": "Built a dynamic web page with content management via API."
+                },
+                {
+                    "name": "Kasa",
+                    "stack": "React",
+                    "description": "Real estate rental web application, front-end feature development."
+                },
+                {
+                    "name": "Nina Carducci",
+                    "stack": "SEO, accessibility",
+                    "description": "Optimized SEO and accessibility for a photographer's website."
+                },
+                {
+                    "name": "724 Events",
+                    "stack": "React",
+                    "description": "Debugging and improvements for an event agency's website."
+                },
+                {
+                    "name": "Argent Bank",
+                    "stack": "React, Redux",
+                    "description": "Implemented the front-end of a banking application and managed state with Redux."
+                }
+            ]
+        },
+        "apprenticeship": {
+            "title": "Work-Study Projects (Keldin)",
+            "items": [
+                {
+                    "name": "Corporate Website (confidential client)",
+                    "stack": "Vue.js, Node.js, MySQL, front-end libraries",
+                    "description": "Responsive adaptation, feature development, and bug fixing in a complex codebase. Strengthened debugging skills and worked directly with the client, gaining a concrete view of real-world requirements."
+                },
+                {
+                    "name": "Data Scraping Projects",
+                    "stack": "Node.js, Puppeteer, Apify",
+                    "description": "Automated extraction and processing of data from multiple websites, with export to JSON and CSV to facilitate analysis and use of the information."
+                }
+            ]
+        }
+    },
+    "skills": {
+        "title": "Technical Skills",
+        "frontend": [
+            "HTML5",
+            "CSS3",
+            "SASS",
+            "JavaScript",
+            "React",
+            "Redux",
+            "Vue.js"
+        ],
+        "uiLibraries": [
+            "Element Plus",
+            "PrimeVue"
+        ],
+        "backend": [
+            "Node.js",
+            "MySQL (basic)",
+            "MongoDB (basic)"
+        ],
+        "scraping": [
+            "Puppeteer",
+            "Apify"
+        ],
+        "tools": [
+            "Git",
+            "GitHub",
+            "GitLab",
+            "Figma",
+            "Agile"
+        ]
+    }
+}
