@@ -1,5 +1,6 @@
 {
     "hero": {
+        "welcome": "Bienvenue, je suis",
         "name": "Célia Haro",
         "role": "Développeuse web Front-end, Scraping",
         "location": "Basée entre Nantes et Angers – Disponible pour collaborer sur vos projets web"
@@ -99,5 +100,9 @@
             "Figma",
             "Agile"
         ]
+    },
+    "contact" : {
+        "title": "Contact",
+        "accroche": "Envie de collaborer ? N'hésitez pas à me contacter via ce formulaire "
     }
 }

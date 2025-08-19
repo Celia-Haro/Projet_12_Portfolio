@@ -4,7 +4,7 @@
     --font-family-main: "Roboto", sans-serif;
     
     /* Thème clair (par défaut) */
-    --bg-color: #fff8f0;
+    --bg-color: #fef0e0;
     --bg-secondary: #beb0b0;
     --main-color: #353a47;
     --other-color: #137b9e;
@@ -15,7 +15,7 @@
 [data-theme="dark"] {
     --bg-color: #1a1a1a;
     --bg-secondary: #353a47;
-    --main-color: #fff8f0;
+    --main-color: #fef0e0;
     --other-color: #137b9e;
     --accent-color: #e63946;
 }
@@ -25,7 +25,7 @@
     :root {
     --bg-color: #1a1a1a;
     --bg-secondary: #353a47;
-    --main-color: #fff8f0;
+    --main-color: #fef0e0;
     --other-color: #137b9e;
     --accent-color: #e63946;
     }
@@ -33,37 +33,66 @@
 
 /* Override si data-theme="light" est explicitement défini */
 [data-theme="light"] {
-    --bg-color: #fff8f0;
+    --bg-color: #fef0e0;
     --bg-secondary: #beb0b0;
     --main-color: #353a47;
     --other-color: #137b9e;
     --accent-color: #e63946;
 }
 
+// Gestion du responsive
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+
+@mixin tablet {
+  @media (min-width: #{$breakpoint-tablet}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$breakpoint-desktop}) {
+    @content;
+  }
+}   
+
+
+
 body {
     font-family: var(--font-family-main);
     background-color: var(--bg-color);
     color: var(--main-color);
     transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-h1, h2, h3 {
-    font-family: var(--font-family-title);
+    padding: 0;
+    margin: 0;
 }
 
 h1 {
+    font-family: var(--font-family-title);
     color: var(--accent-color);
+    font-size: 3rem;
 }
 
 h2, h3 {
+    font-family: var(--font-family-main);
     color: var(--main-color);
+    font-size: 1,5rem;
 }
 
 button {
     background: var(--bg-color);
     color: var(--accent-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
 }
 
 button:active {
     border: none;
+}
+
+button:focus {
+  outline: 2px solid rgba(0, 0, 0, 0.3);
+  outline-offset: 2px;
 }

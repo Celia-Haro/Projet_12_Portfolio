@@ -13,5 +13,5 @@ import About from "./views/About.vue";
 </template>
 
 <style lang="scss">
-@use "./assets/base.scss" as *;
+@use "@/assets/base.scss" as *;
 </style>
