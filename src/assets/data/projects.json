@@ -1,29 +1,79 @@
 [
-  {
-    "id": "booki",
-    "image": "/images/projects/booki.jpg",
-    "category": "training",
-    "stack": "HTML, CSS",
-    "titleKey": "projects.training.items.0.name",
-    "descriptionKey": "projects.training.items.0.description",
-    "links": []
-  },
-  {
-    "id": "ohmyfood",
-    "image": "/images/projects/ohmyfood.jpg",
-    "category": "training",
-    "stack": "SASS, mobile-first",
-    "titleKey": "projects.training.items.1.name",
-    "descriptionKey": "projects.training.items.1.description",
-    "links": []
-  },
-  {
-    "id": "keldin-site",
-    "image": "/images/projects/keldin.jpg",
-    "category": "apprenticeship",
-    "stack": "Vue.js, Node.js, MySQL",
-    "titleKey": "projects.apprenticeship.items.0.name",
-    "descriptionKey": "projects.apprenticeship.items.0.description",
-    "links": []
-  }
+    {
+        "id": "booki",
+        "logo": "src/assets/img/projects-logo/booki.svg",
+        "image": "src/assets/img/projects-detail/booki-detail.webp",
+        "category": "training",
+        "stack": "HTML, CSS",
+        "titleKey": "projects.booki.title",
+        "descriptionKey": "projects.booki.description",
+        "linkCode": "https://github.com/Celia-Haro/Projet_3_Booki"    },
+    {
+        "id": "ohmyfood",
+        "logo": "src/assets/img/projects-logo/ohmyfood.svg",
+        "image": "src/assets/img/projects-detail/ohmyfood-detail.webp",
+        "category": "training",
+        "stack": "SASS, mobile-first",
+        "titleKey": "projects.ohmyfood.title",
+        "descriptionKey": "projects.ohmyfood.description",
+        "linkCode": "https://github.com/Celia-Haro/Projet_4_Ohmyfood",
+        "linkDemo": "https://celia-haro.github.io/Projet_4_Ohmyfood/"
+    },
+    {
+        "id": "portfolio_sophie_bluel",
+        "logo": "src/assets/img/projects-logo/sophiebluel.svg",
+        "image": "src/assets/img/projects-detail/sophiebluel-detail.webp",
+        "category": "training",
+        "stack": "JavaScript, API",
+        "titleKey": "projects.portfolio_sophie_bluel.title",
+        "descriptionKey": "projects.portfolio_sophie_bluel.description",
+        "linkCode": "https://github.com/Celia-Haro/Projet_6_Sophie_Bluel"
+    },
+    {
+        "id": "kasa",
+        "logo": "src/assets/img/projects-logo/kasa.svg",
+        "image": "src/assets/img/projects-detail/kasa-detail.webp",
+        "category": "training",
+        "stack": "React",
+        "titleKey": "projects.kasa.title",
+        "descriptionKey": "projects.kasa.description",
+        "linkCode": "https://github.com/Celia-Haro/Projet_7_Kasa"
+    },
+    {
+        "id": "nina_carducci",
+        "logo": "src/assets/img/projects-logo/ninacarducci.svg",
+        "image": "src/assets/img/projects-detail/ninacarducci-detail.webp",
+        "category": "training",
+        "stack": "SEO, accessibilité",
+        "titleKey": "projects.nina_carducci.title",
+        "descriptionKey": "projects.nina_carducci.description",
+        "linkCode": "https://github.com/Celia-Haro/Projet_8_Nina_Carducci",
+        "linkDemo": "https://celia-haro.github.io/Projet_8_Nina_Carducci/"
+    },
+    {
+        "id": "argent_bank",
+        "logo": "src/assets/img/projects-logo/argentbank.svg",
+        "image": "src/assets/img/projects-detail/argentbank-detail.webp",
+        "category": "training",
+        "stack": "React, Redux",
+        "titleKey": "projects.argent_bank.title",
+        "descriptionKey": "projects.argent_bank.description",
+        "linkCode": "https://github.com/Celia-Haro/Projet_10_ArgentBank-Frontend"
+    },
+    {
+        "id": "client_keldin",
+        "logo": "src/assets/img/projects-logo/confidentiel.svg",
+        "category": "apprenticeship",
+        "stack": "Vue.js, Node.js, MySQL, librairies front-end",
+        "titleKey": "projects.client_keldin.title",
+        "descriptionKey": "projects.client_keldin.description"
+    },
+    {
+        "id": "scraping_keldin",
+        "logo": "src/assets/img/projects-logo/keldin_logo.svg",
+        "category": "apprenticeship",
+        "stack": "Node.js, Puppeteer, Apify",
+        "titleKey": "projects.scraping_keldin.title",
+        "descriptionKey": "projects.scraping_keldin.description"
+    }
 ]

@@ -15,61 +15,62 @@
         "text3": "Chaque nouveau projet est une occasion d’apprendre, d’expérimenter et de repousser mes limites. Curieuse et rigoureuse, je mets mon énergie et mon sens du détail au service de réalisations web à la fois efficaces et engageantes."
     },
     "projects": {
-        "title": "Projets",
-        "training": {
-            "title": "Projets de formation (OpenClassrooms – Intégrateur Web)",
-            "items": [
-                {
-                    "name": "Booki",
-                    "stack": "HTML, CSS",
-                    "description": "Intégration responsive d’un site d’agence de voyage à partir d’une maquette Figma."
-                },
-                {
-                    "name": "Ohmyfood",
-                    "stack": "SASS, mobile-first",
-                    "description": "Amélioration de l’interface mobile d’un site de restauration avec animations CSS."
-                },
-                {
-                    "name": "Portfolio Sophie Bluel",
-                    "stack": "JavaScript, API",
-                    "description": "Création d’une page web dynamique et gestion de contenu via API."
-                },
-                {
-                    "name": "Kasa",
-                    "stack": "React",
-                    "description": "Application web de location immobilière, développement des fonctionnalités front-end."
-                },
-                {
-                    "name": "Nina Carducci",
-                    "stack": "SEO, accessibilité",
-                    "description": "Optimisation du référencement et de l’accessibilité du site d’une photographe."
-                },
-                {
-                    "name": "724 Events",
-                    "stack": "React",
-                    "description": "Débogage et amélioration du site d’une agence événementielle."
-                },
-                {
-                    "name": "Argent Bank",
-                    "stack": "React, Redux",
-                    "description": "Implémentation du front-end d’une application bancaire et gestion des états avec Redux."
-                }
-            ]
+        "title": "Mes projets",
+        "booki": {
+            "title": "Booki",
+            "description": "Intégration responsive d'un site d'agence de voyage à partir d'une maquette Figma.",
+            "stack": "HTML, CSS",
+            "category": "Formation OpenClassrooms",
+            "type": "Intégration web"
         },
-        "apprenticeship": {
-            "title": "Projets en alternance (Keldin)",
-            "items": [
-                {
-                    "name": "Site web d’entreprise (client confidentiel)",
-                    "stack": "Vue.js, Node.js, MySQL, librairies front-end",
-                    "description": "Adaptation responsive, ajout de fonctionnalités et correction de bugs sur une base de code complexe. Développement de solides compétences en débogage et collaboration directe avec le client, offrant un aperçu concret des exigences du métier."
-                },
-                {
-                    "name": "Projets de scraping de données",
-                    "stack": "Node.js, Puppeteer, Apify",
-                    "description": "Extraction et traitement automatisé de données issues de plusieurs sites, avec export en JSON et CSV pour faciliter l’analyse et l’exploitation des informations."
-                }
-            ]
+        "ohmyfood": {
+            "title": "Ohmyfood",
+            "description": "Amélioration de l'interface mobile d'un site de restauration avec animations CSS.",
+            "stack": "SASS, mobile-first",
+            "category": "Formation OpenClassrooms",
+            "type": "Développement mobile"
+        },
+        "portfolio_sophie_bluel": {
+            "title": "Portfolio Sophie Bluel",
+            "description": "Création d'une page web dynamique et gestion de contenu via API.",
+            "stack": "JavaScript, API",
+            "category": "Formation OpenClassrooms",
+            "type": "Développement dynamique"
+        },
+        "kasa": {
+            "title": "Kasa",
+            "description": "Application web de location immobilière, développement des fonctionnalités front-end.",
+            "stack": "React",
+            "category": "Formation OpenClassrooms",
+            "type": "Application React"
+        },
+        "nina_carducci": {
+            "title": "Nina Carducci",
+            "description": "Optimisation du référencement et de l'accessibilité du site d'une photographe.",
+            "stack": "SEO, accessibilité",
+            "category": "Formation OpenClassrooms",
+            "type": "Optimisation"
+        },
+        "argent_bank": {
+            "title": "Argent Bank",
+            "description": "Implémentation du front-end d'une application bancaire et gestion des états avec Redux.",
+            "stack": "React, Redux",
+            "category": "Formation OpenClassrooms",
+            "type": "Application bancaire"
+        },
+        "client_keldin": {
+            "title": "Site web d'entreprise (client confidentiel)",
+            "description": "Adaptation responsive, ajout de fonctionnalités et correction de bugs sur une base de code complexe. Développement de solides compétences en débogage et collaboration directe avec le client, offrant un aperçu concret des exigences du métier.",
+            "stack": "Vue.js, Node.js, MySQL, librairies front-end",
+            "category": "Alternance Keldin",
+            "type": "Développement full-stack"
+        },
+        "scraping_keldin": {
+            "title": "Projets de scraping de données",
+            "description": "Extraction et traitement automatisé de données issues de plusieurs sites, avec export en JSON et CSV pour faciliter l'analyse et l'exploitation des informations.",
+            "stack": "Node.js, Puppeteer, Apify",
+            "category": "Alternance Keldin",
+            "type": "Automatisation"
         }
     },
     "skills": {

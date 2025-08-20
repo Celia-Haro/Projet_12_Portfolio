@@ -15,56 +15,62 @@
         "text3": "Every new project is an opportunity to learn, experiment, and push my limits. Curious and detail-oriented, I put my energy and attention to detail into delivering web solutions that are both effective and engaging."
     },
     "projects": {
-        "title": "Projects",
-        "training": {
-            "title": "Training Projects (OpenClassrooms – Web Integrator)",
-            "items": [
-                {
-                    "name": "Booki",
-                    "stack": "HTML, CSS",
-                    "description": "Responsive integration of a travel agency website based on a Figma mockup."
-                },
-                {
-                    "name": "Ohmyfood",
-                    "stack": "SASS, mobile-first",
-                    "description": "Improved the mobile interface of a restaurant website with CSS animations."
-                },
-                {
-                    "name": "Portfolio Sophie Bluel",
-                    "stack": "JavaScript, API",
-                    "description": "Built a dynamic web page with content management via API."
-                },
-                {
-                    "name": "Kasa",
-                    "stack": "React",
-                    "description": "Real estate rental web application, front-end feature development."
-                },
-                {
-                    "name": "Nina Carducci",
-                    "stack": "SEO, accessibility",
-                    "description": "Optimized SEO and accessibility for a photographer's website."
-                },
-                {
-                    "name": "Argent Bank",
-                    "stack": "React, Redux",
-                    "description": "Implemented the front-end of a banking application and managed state with Redux."
-                }
-            ]
+        "title": "My projects",
+        "booki": {
+            "title": "Booki",
+            "description": "Responsive integration of a travel agency website from a Figma mockup.",
+            "stack": "HTML, CSS",
+            "category": "OpenClassrooms Training",
+            "type": "Web Integration"
         },
-        "apprenticeship": {
-            "title": "Work-Study Projects (Keldin)",
-            "items": [
-                {
-                    "name": "Corporate Website (confidential client)",
-                    "stack": "Vue.js, Node.js, MySQL, front-end libraries",
-                    "description": "Responsive adaptation, feature development, and bug fixing in a complex codebase. Strengthened debugging skills and worked directly with the client, gaining a concrete view of real-world requirements."
-                },
-                {
-                    "name": "Data Scraping Projects",
-                    "stack": "Node.js, Puppeteer, Apify",
-                    "description": "Automated extraction and processing of data from multiple websites, with export to JSON and CSV to facilitate analysis and use of the information."
-                }
-            ]
+        "ohmyfood": {
+            "title": "Ohmyfood",
+            "description": "Mobile interface enhancement for a restaurant website with CSS animations.",
+            "stack": "SASS, mobile-first",
+            "category": "OpenClassrooms Training",
+            "type": "Mobile Development"
+        },
+        "portfolio_sophie_bluel": {
+            "title": "Portfolio Sophie Bluel",
+            "description": "Creation of a dynamic web page and content management via API.",
+            "stack": "JavaScript, API",
+            "category": "OpenClassrooms Training",
+            "type": "Dynamic Development"
+        },
+        "kasa": {
+            "title": "Kasa",
+            "description": "Real estate rental web application, front-end features development.",
+            "stack": "React",
+            "category": "OpenClassrooms Training",
+            "type": "React Application"
+        },
+        "nina_carducci": {
+            "title": "Nina Carducci",
+            "description": "SEO and accessibility optimization of a photographer's website.",
+            "stack": "SEO, accessibility",
+            "category": "OpenClassrooms Training",
+            "type": "Optimization"
+        },
+        "argent_bank": {
+            "title": "Argent Bank",
+            "description": "Front-end implementation of a banking application and state management with Redux.",
+            "stack": "React, Redux",
+            "category": "OpenClassrooms Training",
+            "type": "Banking Application"
+        },
+        "client_keldin": {
+            "title": "Enterprise website (confidential client)",
+            "description": "Responsive adaptation, feature additions and bug fixes on a complex codebase. Developed strong debugging skills and direct client collaboration, providing concrete insight into job requirements.",
+            "stack": "Vue.js, Node.js, MySQL, front-end libraries",
+            "category": "Keldin Apprenticeship",
+            "type": "Full-stack Development"
+        },
+        "scraping_keldin": {
+            "title": "Data scraping projects",
+            "description": "Automated extraction and processing of data from multiple websites, with JSON and CSV export to facilitate analysis and information exploitation.",
+            "stack": "Node.js, Puppeteer, Apify",
+            "category": "Keldin Apprenticeship",
+            "type": "Automation"
         }
     },
     "skills": {

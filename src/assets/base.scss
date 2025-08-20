@@ -5,7 +5,8 @@
     
     /* Thème clair (par défaut) */
     --bg-color: #fef0e0;
-    --bg-secondary: #beb0b0;
+    --card-bg: #fff5ea;
+    --card-bg-hover: #fffaf6;
     --main-color: #353a47;
     --other-color: #137b9e;
     --accent-color: #e63946;
@@ -14,7 +15,8 @@
 /* Thème sombre */
 [data-theme="dark"] {
     --bg-color: #1a1a1a;
-    --bg-secondary: #353a47;
+    --card-bg: #2a2a2a;
+    --card-bg-hover: #333333;
     --main-color: #fef0e0;
     --other-color: #137b9e;
     --accent-color: #e63946;
@@ -34,7 +36,8 @@
 /* Override si data-theme="light" est explicitement défini */
 [data-theme="light"] {
     --bg-color: #fef0e0;
-    --bg-secondary: #beb0b0;
+    --card-bg: #fff5ea;
+    --card-bg-hover: #fffaf6;
     --main-color: #353a47;
     --other-color: #137b9e;
     --accent-color: #e63946;
@@ -73,19 +76,16 @@ h1 {
     font-size: 3rem;
 }
 
-h2, h3 {
-  font-size: 1,5rem; 
-}
-
 h2 {
   font-family: var(--font-family-title);
   color: var(--accent-color);
-  
+  font-size: 2rem; 
 }
 
 h3 {
-   font-family: var(--font-family-main);
+   font-family: var(--font-family-title);
    color: var(--main-color);
+   font-size: 1.5rem; 
 }
 
 button {
