@@ -1,0 +1,29 @@
+[
+  {
+    "id": "booki",
+    "image": "/images/projects/booki.jpg",
+    "category": "training",
+    "stack": "HTML, CSS",
+    "titleKey": "projects.training.items.0.name",
+    "descriptionKey": "projects.training.items.0.description",
+    "links": []
+  },
+  {
+    "id": "ohmyfood",
+    "image": "/images/projects/ohmyfood.jpg",
+    "category": "training",
+    "stack": "SASS, mobile-first",
+    "titleKey": "projects.training.items.1.name",
+    "descriptionKey": "projects.training.items.1.description",
+    "links": []
+  },
+  {
+    "id": "keldin-site",
+    "image": "/images/projects/keldin.jpg",
+    "category": "apprenticeship",
+    "stack": "Vue.js, Node.js, MySQL",
+    "titleKey": "projects.apprenticeship.items.0.name",
+    "descriptionKey": "projects.apprenticeship.items.0.description",
+    "links": []
+  }
+]

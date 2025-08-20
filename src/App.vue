@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Navbar from "./components/navbar.vue";
+import Navbar from "./components/Navbar.vue";
 import Hero from "./views/Hero.vue";
 import About from "./views/About.vue";
 import Projects from "./views/Projects.vue";

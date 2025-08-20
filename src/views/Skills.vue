@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="skills" id="skills">
     <h2>{{ t("skills.title") }}</h2>
     <div class="container">
       <!-- générer une 'carte' par compétence, avec le logo et un petit effet de

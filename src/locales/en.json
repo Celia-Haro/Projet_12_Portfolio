@@ -45,11 +45,6 @@
                     "description": "Optimized SEO and accessibility for a photographer's website."
                 },
                 {
-                    "name": "724 Events",
-                    "stack": "React",
-                    "description": "Debugging and improvements for an event agency's website."
-                },
-                {
                     "name": "Argent Bank",
                     "stack": "React, Redux",
                     "description": "Implemented the front-end of a banking application and managed state with Redux."
@@ -73,7 +68,7 @@
         }
     },
     "skills": {
-        "title": "Technical Skills",
+        "title": "Skills",
         "frontend": [
             "HTML5",
             "CSS3",
