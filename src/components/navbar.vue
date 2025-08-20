@@ -1,34 +1,18 @@
 <template>
-  <nav class="navbar">
-    <div class="logo">{{ t("hero.name") }}</div>
+  <nav class="navbar" role="navigation" aria-label="Navigation principale">
+    <a class="logo" href="#" @click.prevent="smoothScrollTo('#top')">
+      {{ t("navigation.logo") }}
+    </a>
 
-    <!-- Menu desktop complet -->
+    <!-- Menu desktop -->
     <div class="nav-links desktop">
-      <a href="">{{ t("about.title") }}</a>
-      <a href="">{{ t("projects.title") }}</a>
-      <a href="">{{ t("skills.title") }}</a>
-      <a href="">{{ t("contact.title") }}</a>
+      <template v-for="link in navigationLinks" :key="link.href">
+        <a :href="link.href" @click.prevent="smoothScrollTo(link.href)">
+          {{ t(link.labelKey) }}
+        </a>
+      </template>
 
-      <button
-        v-for="lang in availableLanguages"
-        :key="lang"
-        @click="changeLanguage(lang)"
-        :class="{ active: currentLanguage === lang }">
-        {{ lang.toUpperCase() }}
-      </button>
-
-      <button
-        @click="toggleTheme"
-        class="theme-toggle"
-        :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'">
-        <component :is="isDark ? IconSun : IconMoon" class="icon" />
-      </button>
-    </div>
-
-    <!-- Menu tablette : boutons + burger pour les liens -->
-    <div class="nav-tablet">
-      <!-- Boutons toujours visibles sur tablette -->
-      <div class="tablet-buttons">
+      <div class="action-buttons">
         <button
           v-for="lang in availableLanguages"
           :key="lang"
@@ -40,32 +24,57 @@
         <button
           @click="toggleTheme"
           class="theme-toggle"
-          :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'">
-          <component :is="isDark ? IconSun : IconMoon" class="icon" />
+          :aria-label="themeToggleLabel">
+          <component :is="themeIcon" class="icon" />
+        </button>
+      </div>
+    </div>
+
+    <!-- Menu tablette : boutons + burger -->
+    <div class="nav-tablet">
+      <div class="tablet-buttons action-buttons">
+        <button
+          v-for="lang in availableLanguages"
+          :key="lang"
+          @click="changeLanguage(lang)"
+          :class="{ active: currentLanguage === lang }">
+          {{ lang.toUpperCase() }}
+        </button>
+
+        <button
+          @click="toggleTheme"
+          class="theme-toggle"
+          :aria-label="themeToggleLabel">
+          <component :is="themeIcon" class="icon" />
         </button>
       </div>
 
-      <!-- Menu burger pour les liens de navigation -->
       <button
-        @click="toggleMobileMenu"
+        @click.stop="toggleMobileMenu($event)"
         class="burger-btn"
-        :class="{ active: mobileMenuOpen }">
-        <component
-          :is="IconMenu"
-          v-show="!mobileMenuOpen"
-          class="icon menu-icon" />
-        <component
-          :is="IconX"
-          v-show="mobileMenuOpen"
-          class="icon close-icon" />
+        :class="{ active: mobileMenuOpen }"
+        :aria-expanded="mobileMenuOpen"
+        aria-haspopup="true"
+        aria-controls="tablet-menu"
+        aria-label="Menu principal">
+        <component :is="menuIcon" class="icon" />
       </button>
 
       <transition name="slide">
-        <div v-if="mobileMenuOpen" class="tablet-links">
-          <a href="" @click="toggleMobileMenu">{{ t("about.title") }}</a>
-          <a href="" @click="toggleMobileMenu">{{ t("projects.title") }}</a>
-          <a href="" @click="toggleMobileMenu">{{ t("skills.title") }}</a>
-          <a href="" @click="toggleMobileMenu">{{ t("contact.title") }}</a>
+        <div
+          v-show="mobileMenuOpen"
+          id="tablet-menu"
+          class="dropdown-menu"
+          role="menu">
+          <template v-for="link in navigationLinks" :key="link.href">
+            <a
+              :href="link.href"
+              @click.prevent="smoothScrollTo(link.href)"
+              role="menuitem"
+              tabindex="0">
+              {{ t(link.labelKey) }}
+            </a>
+          </template>
         </div>
       </transition>
     </div>
@@ -73,40 +82,48 @@
     <!-- Menu mobile : uniquement le burger -->
     <div class="mobile-menu">
       <button
-        @click="toggleMobileMenu"
+        @click.stop="toggleMobileMenu($event)"
         class="burger-btn"
-        :class="{ active: mobileMenuOpen }">
-        <component
-          :is="IconMenu"
-          v-show="!mobileMenuOpen"
-          class="icon menu-icon" />
-        <component
-          :is="IconX"
-          v-show="mobileMenuOpen"
-          class="icon close-icon" />
+        :class="{ active: mobileMenuOpen }"
+        :aria-expanded="mobileMenuOpen"
+        aria-haspopup="true"
+        aria-controls="mobile-menu"
+        aria-label="Menu principal">
+        <component :is="menuIcon" class="icon" />
       </button>
 
       <transition name="slide">
-        <div v-if="mobileMenuOpen" class="mobile-links">
-          <a href="" @click="toggleMobileMenu">{{ t("about.title") }}</a>
-          <a href="" @click="toggleMobileMenu">{{ t("projects.title") }}</a>
-          <a href="" @click="toggleMobileMenu">{{ t("skills.title") }}</a>
-          <a href="" @click="toggleMobileMenu">{{ t("contact.title") }}</a>
+        <div
+          v-show="mobileMenuOpen"
+          id="mobile-menu"
+          class="dropdown-menu"
+          role="menu">
+          <template v-for="link in navigationLinks" :key="link.href">
+            <a
+              :href="link.href"
+              @click.prevent="smoothScrollTo(link.href)"
+              role="menuitem"
+              tabindex="0">
+              {{ t(link.labelKey) }}
+            </a>
+          </template>
 
-          <button
-            v-for="lang in availableLanguages"
-            :key="lang"
-            @click="
-              changeLanguage(lang);
-              toggleMobileMenu();
-            "
-            :class="{ active: currentLanguage === lang }">
-            {{ lang.toUpperCase() }}
-          </button>
+          <div class="mobile-actions">
+            <button
+              v-for="lang in availableLanguages"
+              :key="lang"
+              @click="handleMobileLanguageChange(lang)"
+              :class="{ active: currentLanguage === lang }">
+              {{ lang.toUpperCase() }}
+            </button>
 
-          <button @click="toggleTheme" class="theme-toggle">
-            <component :is="isDark ? IconSun : IconMoon" class="icon" />
-          </button>
+            <button
+              @click="toggleTheme"
+              class="theme-toggle"
+              aria-label="Basculer le thème">
+              <component :is="themeIcon" class="icon" />
+            </button>
+          </div>
         </div>
       </transition>
     </div>
@@ -114,27 +131,46 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from "vue";
+import { ref, onMounted, computed, onUnmounted, nextTick } from "vue";
 import { useI18n } from "vue-i18n";
 
-// Import des SVG comme composants
+// Icônes SVG
 import IconSun from "@/assets/svg/menu/IconSun.svg";
 import IconMoon from "@/assets/svg/menu/IconMoon.svg";
 import IconMenu from "@/assets/svg/menu/IconMenu.svg";
 import IconX from "@/assets/svg/menu/IconX.svg";
 
-// Gestion de la langue
 const { t, locale } = useI18n();
-const availableLanguages = ["en", "fr"];
-const currentLanguage = ref(locale.value);
+const availableLanguages = ["en", "fr"] as const;
+type Language = (typeof availableLanguages)[number];
 
-function changeLanguage(lang: string) {
+const navigationLinks = [
+  { href: "#about", labelKey: "about.title" },
+  { href: "#projects", labelKey: "projects.title" },
+  { href: "#skills", labelKey: "skills.title" },
+  { href: "#contact", labelKey: "contact.title" },
+] as const;
+
+// État
+const currentLanguage = ref<Language>(locale.value as Language);
+const isDark = ref(false);
+const mobileMenuOpen = ref(false);
+
+// Icônes
+const themeIcon = computed(() => (isDark.value ? IconSun : IconMoon));
+const menuIcon = computed(() => (mobileMenuOpen.value ? IconX : IconMenu));
+const themeToggleLabel = computed(() =>
+  isDark.value ? "Passer en mode clair" : "Passer en mode sombre"
+);
+
+// Mémorise le dernier bouton burger déclencheur pour rendre le focus à la fermeture
+let lastToggler: HTMLButtonElement | null = null;
+
+// Fonctions
+const changeLanguage = (lang: Language) => {
   locale.value = lang;
   currentLanguage.value = lang;
-}
-
-// Gestion du mode dark / light
-const isDark = ref(false);
+};
 
 const setTheme = (theme: "light" | "dark" | "auto") => {
   document.documentElement.setAttribute("data-theme", theme);
@@ -147,6 +183,71 @@ const toggleTheme = () => {
   setTheme(newTheme);
 };
 
+const focusFirstVisibleMenuItem = () => {
+  const items = Array.from(
+    document.querySelectorAll<HTMLAnchorElement>(".dropdown-menu a")
+  );
+  const firstVisible = items.find((el) => el.offsetParent !== null);
+  firstVisible?.focus();
+};
+
+const toggleMobileMenu = (e?: MouseEvent) => {
+  if (e?.currentTarget instanceof HTMLButtonElement) {
+    lastToggler = e.currentTarget;
+  }
+  mobileMenuOpen.value = !mobileMenuOpen.value;
+
+  if (mobileMenuOpen.value) {
+    nextTick(focusFirstVisibleMenuItem);
+  } else {
+    nextTick(() => lastToggler?.focus());
+  }
+};
+
+const closeMobileMenu = () => {
+  mobileMenuOpen.value = false;
+  nextTick(() => lastToggler?.focus());
+};
+
+const handleMobileLanguageChange = (lang: Language) => {
+  changeLanguage(lang);
+  closeMobileMenu();
+};
+
+const smoothScrollTo = (targetId: string) => {
+  const target = document.querySelector<HTMLElement>(targetId);
+  if (target) {
+    target.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest",
+    });
+  } else if (targetId === "#top") {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+  closeMobileMenu();
+};
+
+// Fermer le menu en cliquant à l'extérieur
+const handleClickOutside = (event: Event) => {
+  const target = event.target as HTMLElement;
+  if (
+    mobileMenuOpen.value &&
+    !target.closest(".dropdown-menu") &&
+    !target.closest(".burger-btn")
+  ) {
+    closeMobileMenu();
+  }
+};
+
+// Escape pour fermer
+const handleKeyDown = (event: KeyboardEvent) => {
+  if (event.key === "Escape" && mobileMenuOpen.value) {
+    closeMobileMenu();
+  }
+};
+
+// Lifecycle
 onMounted(() => {
   const savedTheme = localStorage.getItem("theme") as "light" | "dark" | null;
   if (savedTheme) {
@@ -157,243 +258,179 @@ onMounted(() => {
     ).matches;
     setTheme(prefersDark ? "dark" : "light");
   }
+
+  document.addEventListener("click", handleClickOutside);
+  document.addEventListener("keydown", handleKeyDown);
 });
 
-// Menu mobile
-const mobileMenuOpen = ref(false);
-const toggleMobileMenu = () => {
-  mobileMenuOpen.value = !mobileMenuOpen.value;
-};
+onUnmounted(() => {
+  document.removeEventListener("click", handleClickOutside);
+  document.removeEventListener("keydown", handleKeyDown);
+});
 </script>
 
 <style lang="scss" scoped>
+@use "@/assets/base.scss" as *;
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 1rem;
-  background-color: var(--navbar-bg);
-  position: relative;
+  width: 100%;
+  height: 10vh;
+  z-index: 1000;
+  box-sizing: border-box;
+  background-color: var(--bg-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
 
-  .nav-links,
-  .mobile-links,
-  .tablet-links {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+  @include tablet {
+    padding: 1rem 1.5rem;
+    height: 15vh;
+  }
+
+  @include desktop {
+    padding: 2rem 1.5rem;
+  }
+
+  .logo {
+    font-family: var(--font-family-title);
+    font-size: 1.5rem;
+  }
+}
+
+a {
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: var(--hover-bg, rgba(0, 0, 0, 0.1));
+  }
+}
+
+.action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  @include desktop {
+    gap: 1rem;
+  }
+
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 0.25rem 0.5rem;
+    transition: all 0.2s ease;
+
+    &.active {
+      text-decoration: underline;
+    }
+  }
+
+  .theme-toggle .icon {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+  }
+}
+
+.dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-color);
+  position: absolute;
+  top: 100%;
+  right: 0;
+  padding: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  gap: 0.5rem;
+  min-width: 200px;
+  z-index: 1001;
+  border: 1px solid var(--border-color, rgba(0, 0, 0, 0.1));
+
+  .mobile-actions {
+    @extend .action-buttons;
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--border-color, rgba(0, 0, 0, 0.1));
 
     button {
-      background: none;
-      border: none;
-      cursor: pointer;
-      font-weight: bold;
-      padding: 0.25rem 0.5rem;
-
-      &.active {
-        text-decoration: underline;
-      }
-    }
-
-    .theme-toggle .icon {
-      width: 24px;
-      height: 24px;
-      fill: currentColor;
-      transition: transform 0.2s ease;
-    }
-  }
-
-  /* Menu desktop complet (>1024px) */
-  .desktop {
-    @media (max-width: 1024px) {
-      display: none;
-    }
-  }
-
-  /* Menu tablette : boutons + burger (769px à 1024px) */
-  .nav-tablet {
-    display: none;
-
-    @media (min-width: 769px) and (max-width: 1024px) {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      flex-direction: column;
-      align-items: flex-end;
-
-      .tablet-buttons {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-
-        button {
-          background: none;
-          border: none;
-          cursor: pointer;
-          font-weight: bold;
-          padding: 0.25rem 0.5rem;
-
-          &.active {
-            text-decoration: underline;
-          }
-        }
-
-        .theme-toggle .icon {
-          width: 24px;
-          height: 24px;
-          fill: currentColor;
-          transition: transform 0.2s ease;
-        }
-      }
-
-      .burger-btn {
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 0.25rem;
-        position: relative;
-        width: 28px;
-        height: 28px;
-        transition: transform 0.2s ease;
-
-        .icon {
-          text-align: center;
-          fill: currentColor;
-          transition: opacity 0.2s ease, transform 0.2s ease;
-        }
-
-        .menu-icon {
-          opacity: 1;
-          transform: translateY(0);
-        }
-
-        .close-icon {
-          opacity: 0;
-          transform: translateY(-5px);
-        }
-
-        &.active {
-          .menu-icon {
-            opacity: 0;
-            transform: translateY(5px);
-          }
-          .close-icon {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-      }
-
-      .tablet-links {
-        display: flex;
-        flex-direction: column;
-        background-color: var(--navbar-bg);
-        position: absolute;
-        top: 100%;
-        right: 0;
-        padding: 1rem;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-        gap: 0.5rem;
-        min-width: 200px;
-
-        a {
-          padding: 0.5rem;
-          text-decoration: none;
-          border-radius: 4px;
-          transition: background-color 0.2s ease;
-
-          &:hover {
-            background-color: var(--hover-bg, rgba(0, 0, 0, 0.1));
-          }
-        }
-      }
-    }
-  }
-
-  /* Menu mobile uniquement burger (≤768px) */
-  .mobile-menu {
-    display: none;
-
-    @media (max-width: 768px) {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-
-      .burger-btn {
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 0.25rem;
-        position: relative;
-        width: 28px;
-        height: 28px;
-        transition: transform 0.2s ease;
-
-        .icon {
-          text-align: center;
-          fill: currentColor;
-          transition: opacity 0.2s ease, transform 0.2s ease;
-        }
-
-        .menu-icon {
-          opacity: 1;
-          transform: translateY(0);
-        }
-
-        .close-icon {
-          opacity: 0;
-          transform: translateY(-5px);
-        }
-
-        &.active {
-          .menu-icon {
-            opacity: 0;
-            transform: translateY(5px);
-          }
-          .close-icon {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-      }
-
-      .mobile-links {
-        display: flex;
-        flex-direction: column;
-        background-color: var(--navbar-bg);
-        position: absolute;
-        top: 100%;
-        right: 0;
-        padding: 1rem;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-        gap: 0.5rem;
-        min-width: 200px;
-
-        a {
-          padding: 0.5rem;
-          text-decoration: none;
-          border-radius: 4px;
-          transition: background-color 0.2s ease;
-
-          &:hover {
-            background-color: var(--hover-bg, rgba(0, 0, 0, 0.1));
-          }
-        }
-
-        button {
-          margin: 0.25rem 0;
-        }
-      }
+      margin: 0.25rem 0;
     }
   }
 }
 
-/* Transition slide pour menus déroulants */
+.desktop {
+  display: none;
+
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+.nav-tablet {
+  display: none;
+
+  @include tablet {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  @include tablet {
+    display: none;
+  }
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.burger-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  position: relative;
+  width: 28px;
+  height: 28px;
+  transition: transform 0.2s ease;
+
+  .icon {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+  }
+}
+
 .slide-enter-active,
 .slide-leave-active {
   transition: all 0.3s ease;
 }
+
 .slide-enter-from,
 .slide-leave-to {
   transform: translateY(-20px);

@@ -1,4 +1,7 @@
 {
+    "navigation": {
+        "logo":"C.H"
+    },
     "hero": {
         "welcome": "Welcome, I am",
         "name": "Célia Haro",
@@ -100,5 +103,9 @@
             "Figma",
             "Agile"
         ]
+    },
+     "contact" : {
+        "title": "Contact",
+        "accroche": "You have a project in mind ? Let's bring it to reality together "
     }
 }

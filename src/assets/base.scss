@@ -41,7 +41,7 @@
 }
 
 // Gestion du responsive
-$breakpoint-tablet: 768px;
+$breakpoint-tablet: 600px;
 $breakpoint-desktop: 1024px;
 
 @mixin tablet {
@@ -74,14 +74,24 @@ h1 {
 }
 
 h2, h3 {
-    font-family: var(--font-family-main);
-    color: var(--main-color);
-    font-size: 1,5rem;
+  font-size: 1,5rem; 
+}
+
+h2 {
+  font-family: var(--font-family-title);
+  color: var(--accent-color);
+  
+}
+
+h3 {
+   font-family: var(--font-family-main);
+   color: var(--main-color);
 }
 
 button {
     background: var(--bg-color);
     color: var(--accent-color);
+    font-family: var(--font-family-main);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -95,4 +105,10 @@ button:active {
 button:focus {
   outline: 2px solid rgba(0, 0, 0, 0.3);
   outline-offset: 2px;
+}
+
+a {
+  color: var(--main-color);
+  text-decoration: none;
+
 }

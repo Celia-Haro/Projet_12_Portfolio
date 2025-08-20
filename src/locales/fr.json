@@ -1,4 +1,7 @@
 {
+    "navigation": {
+        "logo":"C.H"
+    },
     "hero": {
         "welcome": "Bienvenue, je suis",
         "name": "Célia Haro",

@@ -1,6 +1,6 @@
 <template>
   <section class="hero">
-    <div class="animation">je suis une animation</div>
+    <div class="animation"></div>
     <div class="text-content">
       <h2>{{ t("hero.welcome") }}</h2>
       <h1>{{ t("hero.name") }}</h1>
@@ -43,6 +43,9 @@ const { t } = useI18n();
     flex-direction: column;
     justify-content: center;
     text-align: left;
+    h2 {
+      color: var(--main-color);
+    }
 
     @include tablet {
       width: 70%;
