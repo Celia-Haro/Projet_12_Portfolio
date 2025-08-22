@@ -1,0 +1,92 @@
+[
+  {
+    "id": "html",
+    "logo": "src/assets/img/skills/html-5.webp",
+    "titleKey": "HTML"
+  },
+  {
+    "id": "css",
+    "logo": "src/assets/img/skills/css-3.webp",
+    "titleKey": "CSS"
+  },
+  {
+    "id": "javascript",
+    "logo": "src/assets/img/skills/javascript.webp",
+    "titleKey": "JavaScript"
+  },
+  {
+    "id": "sass",
+    "logo": "src/assets/img/skills/sass.webp",
+    "titleKey": "SASS"
+  },
+  {
+    "id": "react",
+    "logo": "src/assets/img/skills/react.webp",
+    "titleKey": "React"
+  },
+  {
+    "id": "redux",
+    "logo": "src/assets/img/skills/redux.webp",
+    "titleKey": "Redux"
+  },
+  {
+    "id": "vuejs",
+    "logo": "src/assets/img/skills/vuejs.png",
+    "titleKey": "Vue.js"
+  },
+  {
+    "id": "primevue",
+    "logo": "src/assets/img/skills/primevue.webp",
+    "titleKey": "PrimeVue"
+  },
+  {
+    "id": "nodejs",
+    "logo": "src/assets/img/skills/nodejs.png",
+    "titleKey": "Node.js"
+  },
+  {
+    "id": "mysql",
+    "logo": "src/assets/img/skills/mysql.webp",
+    "titleKey": "MySQL"
+  },
+  {
+    "id": "git",
+    "logo": "src/assets/img/skills/git.webp",
+    "titleKey": "Git"
+  },
+  {
+    "id": "figma",
+    "logo": "src/assets/img/skills/figma.webp",
+    "titleKey": "Figma"
+  },
+  {
+    "id": "mongodb",
+    "logo": "src/assets/img/skills/mongodb.png",
+    "titleKey": "MongoDB"
+  },
+   {
+    "id": "puppeteer",
+    "logo": "src/assets/img/skills/puppeteer.svg",
+    "titleKey": "Puppeteer"
+  },
+   {
+    "id": "apify",
+    "logo": "src/assets/img/skills/apify.webp",
+    "titleKey": "Apify"
+  },
+   {
+    "id": "github",
+    "logo": "src/assets/img/skills/github.webp",
+    "titleKey": "Github"
+  },
+   {
+    "id": "gitlab",
+    "logo": "src/assets/img/skills/gitlab.webp",
+    "titleKey": "Gitlab"
+  },
+   {
+    "id": "agile",
+    "logo": "src/assets/img/skills/agile.png",
+    "titleKey": "Agile"
+  }
+]

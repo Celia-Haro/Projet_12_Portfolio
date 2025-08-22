@@ -288,7 +288,7 @@ onUnmounted(() => {
 
   @include tablet {
     padding: 1rem 1.5rem;
-    height: 15vh;
+    height: 12vh;
   }
 
   @include desktop {
@@ -308,7 +308,7 @@ a {
   transition: background-color 0.2s ease;
 
   &:hover {
-    background-color: var(--hover-bg, rgba(0, 0, 0, 0.1));
+    color: var(--accent-color);
   }
 }
 
@@ -366,6 +366,9 @@ a {
 
     button {
       margin: 0.25rem 0;
+      width: fit-content;
+      padding: 0.5rem;
+      text-align: left;
     }
   }
 }
