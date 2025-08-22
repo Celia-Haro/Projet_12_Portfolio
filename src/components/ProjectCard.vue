@@ -4,11 +4,26 @@
       :src="project.image"
       :alt="t(project.titleKey)"
       class="project-image" />
-    <h3 class="project-title">{{ t(project.titleKey) }}</h3>
-    <div class="tags">
-      <span v-for="tech in stackArray" :key="tech" class="tag">{{ tech }}</span>
+
+    <!-- Ligne titre + badge -->
+    <div class="project-header">
+      <h3 class="project-title">{{ t(project.titleKey) }}</h3>
+      <div class="category-badge" v-if="badgeIcon">
+        <img :src="badgeIcon" alt="category icon" />
+      </div>
     </div>
+
+    <!-- Tags -->
+    <div class="tags">
+      <div class="stack">
+        <span v-for="tech in stackArray" :key="tech" class="tag">{{
+          tech
+        }}</span>
+      </div>
+    </div>
+
     <p class="project-description">{{ t(project.descriptionKey) }}</p>
+
     <div v-if="project.links.length" class="project-links">
       <a
         v-for="link in project.links"
@@ -24,6 +39,7 @@
 
 <script setup lang="ts">
 import { useI18n } from "vue-i18n";
+import { computed } from "vue";
 
 interface Project {
   id: string;
@@ -38,12 +54,24 @@ interface Project {
 const props = defineProps<{ project: Project }>();
 const { t } = useI18n();
 const stackArray = props.project.stack.split(",").map((s) => s.trim());
+
+const badgeIcon = computed(() => {
+  switch (props.project.category) {
+    case "work":
+      return "src/assets/img/projects-scope/keldin_logo.svg";
+    case "training":
+      return "src/assets/img/projects-scope/openclassrooms_logo.webp";
+    default:
+      return null;
+  }
+});
 </script>
 
 <style scoped lang="scss">
 @use "@/assets/base.scss" as *;
 
 .project-card {
+  position: relative;
   background: var(--card-bg);
   border-radius: 1rem;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.13);
@@ -63,34 +91,66 @@ const stackArray = props.project.stack.split(",").map((s) => s.trim());
 
 .project-image {
   width: 100%;
-  height: 175px;
   object-fit: cover;
   display: block;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
 }
 
-.project-title {
+/* Ligne titre + badge */
+.project-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin: 1rem 1rem 0 1rem;
+  gap: 1rem;
+}
+
+.project-title {
   font-size: 1.3rem;
   font-weight: bold;
   color: var(--main-color);
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+.category-badge {
+  width: 28px;
+  height: 28px;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+
+  img {
+    width: 100%;
+    height: 100%;
+    min-width: 28px;
+    border-radius: 1rem;
+  }
 }
 
 .tags {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
   gap: 0.5rem;
   margin: 0.7rem 1rem 0.8rem 1rem;
-}
-.tag {
-  background: transparent;
-  color: var(--main-color);
-  border: 1px solid var(--main-color);
-  border-radius: 1rem;
-  padding: 0.2rem 0.8rem;
-  font-size: 0.82rem;
-  font-weight: 600;
+
+  .stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    .tag {
+      background: transparent;
+      color: var(--main-color);
+      border: 1px solid var(--main-color);
+      border-radius: 1rem;
+      padding: 0.2rem 0.6rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+  }
 }
 
 .project-description {
@@ -105,15 +165,18 @@ const stackArray = props.project.stack.split(",").map((s) => s.trim());
   display: flex;
   gap: 0.8rem;
 }
+
 .project-links a {
   padding: 0.4rem 1.1rem;
-  border-radius: 14px;
+  border-radius: 0.75rem;
   font-weight: 600;
   text-decoration: none;
-  transition: background 0.2s, transform 0.15s;
+  border: 1px solid var(--main-color);
+  transition: color 0.2s, transform 0.15s;
 }
+
 .project-links a:hover {
-  background: linear-gradient(90deg, #22d3ee 0%, #1a82f7 100%);
+  color: var(--accent-color);
   transform: scale(1.08);
 }
 </style>

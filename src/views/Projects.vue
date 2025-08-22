@@ -8,19 +8,19 @@
         @click="setFilter('all')"
         :class="{ active: activeFilter === 'all' }"
         class="filter-btn">
-        Tous
+        {{ t("projects.filterAll") }}
       </button>
       <button
         @click="setFilter('training')"
         :class="{ active: activeFilter === 'training' }"
         class="filter-btn">
-        Formation
+        {{ t("projects.filterTraining") }}
       </button>
       <button
-        @click="setFilter('apprenticeship')"
-        :class="{ active: activeFilter === 'apprenticeship' }"
+        @click="setFilter('work')"
+        :class="{ active: activeFilter === 'work' }"
         class="filter-btn">
-        Alternance
+        {{ t("projects.filterWork") }}
       </button>
     </div>
 
@@ -66,9 +66,9 @@ interface ProjectData {
 const { t } = useI18n();
 
 // Filtre actif
-const activeFilter = ref<"all" | "training" | "apprenticeship">("all");
+const activeFilter = ref<"all" | "training" | "work">("all");
 
-const setFilter = (filter: "all" | "training" | "apprenticeship") => {
+const setFilter = (filter: "all" | "training" | "work") => {
   activeFilter.value = filter;
 };
 
@@ -105,7 +105,8 @@ const adaptedProject = (project: ProjectData): ProjectCardProps => {
 
 .projects h2 {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
 }
 
 .filter-buttons {

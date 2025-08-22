@@ -16,6 +16,9 @@
     },
     "projects": {
         "title": "Mes projets",
+        "filterAll":"Tous",
+        "filterTraining": "Formation",
+        "filterWork": "Entreprise",
         "booki": {
             "title": "Booki",
             "description": "Intégration responsive d'un site d'agence de voyage à partir d'une maquette Figma.",

@@ -30,4 +30,8 @@ import Contact from "./views/Contact.vue";
   align-items: center;
   padding: 1rem;
 }
+
+section[id] {
+  scroll-margin-top: 80px;
+}
 </style>

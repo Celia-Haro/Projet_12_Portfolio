@@ -16,6 +16,9 @@
     },
     "projects": {
         "title": "My projects",
+        "filterAll":"All",
+        "filterTraining": "Training",
+        "filterWork": "Work",
         "booki": {
             "title": "Booki",
             "description": "Responsive integration of a travel agency website from a Figma mockup.",

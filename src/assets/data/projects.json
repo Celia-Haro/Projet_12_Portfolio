@@ -1,23 +1,11 @@
 [
     {
-        "id": "booki",
-        "logo": "src/assets/img/projects-logo/booki.svg",
-        "image": "src/assets/img/projects-detail/booki-detail.webp",
-        "category": "training",
-        "stack": "HTML, CSS",
-        "titleKey": "projects.booki.title",
-        "descriptionKey": "projects.booki.description",
-        "linkCode": "https://github.com/Celia-Haro/Projet_3_Booki"    },
-    {
-        "id": "ohmyfood",
-        "logo": "src/assets/img/projects-logo/ohmyfood.svg",
-        "image": "src/assets/img/projects-detail/ohmyfood-detail.webp",
-        "category": "training",
-        "stack": "SASS, mobile-first",
-        "titleKey": "projects.ohmyfood.title",
-        "descriptionKey": "projects.ohmyfood.description",
-        "linkCode": "https://github.com/Celia-Haro/Projet_4_Ohmyfood",
-        "linkDemo": "https://celia-haro.github.io/Projet_4_Ohmyfood/"
+        "id": "scraping_keldin",
+        "image": "src/assets/img/projects-detail/scraping-detail.webp",
+        "category": "work",
+        "stack": "Node.js, Puppeteer, Apify",
+        "titleKey": "projects.scraping_keldin.title",
+        "descriptionKey": "projects.scraping_keldin.description"
     },
     {
         "id": "portfolio_sophie_bluel",
@@ -28,6 +16,17 @@
         "titleKey": "projects.portfolio_sophie_bluel.title",
         "descriptionKey": "projects.portfolio_sophie_bluel.description",
         "linkCode": "https://github.com/Celia-Haro/Projet_6_Sophie_Bluel"
+    },
+    {
+        "id": "ohmyfood",
+        "logo": "src/assets/img/projects-logo/ohmyfood.svg",
+        "image": "src/assets/img/projects-detail/ohmyfood-detail.webp",
+        "category": "training",
+        "stack": "SASS, mobile-first",
+        "titleKey": "projects.ohmyfood.title",
+        "descriptionKey": "projects.ohmyfood.description",
+        "linkCode": "https://github.com/Celia-Haro/Projet_4_Ohmyfood",
+        "linkDemo": "https://celia-haro.github.io/Projet_4_Ohmyfood/"
     },
     {
         "id": "kasa",
@@ -51,6 +50,24 @@
         "linkDemo": "https://celia-haro.github.io/Projet_8_Nina_Carducci/"
     },
     {
+        "id": "booki",
+        "logo": "src/assets/img/projects-logo/booki.svg",
+        "image": "src/assets/img/projects-detail/booki-detail.webp",
+        "category": "training",
+        "stack": "HTML, CSS",
+        "titleKey": "projects.booki.title",
+        "descriptionKey": "projects.booki.description",
+        "linkCode": "https://github.com/Celia-Haro/Projet_3_Booki"    
+    },
+    {
+        "id": "client_keldin",
+        "logo": "src/assets/img/projects-detail/client-detail.png",
+        "category": "work",
+        "stack": "Vue.js, Node.js, MySQL, librairies front-end",
+        "titleKey": "projects.client_keldin.title",
+        "descriptionKey": "projects.client_keldin.description"
+    },
+    {
         "id": "argent_bank",
         "logo": "src/assets/img/projects-logo/argentbank.svg",
         "image": "src/assets/img/projects-detail/argentbank-detail.webp",
@@ -59,21 +76,6 @@
         "titleKey": "projects.argent_bank.title",
         "descriptionKey": "projects.argent_bank.description",
         "linkCode": "https://github.com/Celia-Haro/Projet_10_ArgentBank-Frontend"
-    },
-    {
-        "id": "client_keldin",
-        "logo": "src/assets/img/projects-logo/confidentiel.svg",
-        "category": "apprenticeship",
-        "stack": "Vue.js, Node.js, MySQL, librairies front-end",
-        "titleKey": "projects.client_keldin.title",
-        "descriptionKey": "projects.client_keldin.description"
-    },
-    {
-        "id": "scraping_keldin",
-        "logo": "src/assets/img/projects-logo/keldin_logo.svg",
-        "category": "apprenticeship",
-        "stack": "Node.js, Puppeteer, Apify",
-        "titleKey": "projects.scraping_keldin.title",
-        "descriptionKey": "projects.scraping_keldin.description"
     }
+    
 ]
