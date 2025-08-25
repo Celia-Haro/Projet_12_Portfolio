@@ -110,6 +110,10 @@
     },
     "contact" : {
         "title": "Contact",
-        "accroche": "Envie de collaborer ? N'hésitez pas à me contacter via ce formulaire "
+        "accroche": "Envie de collaborer ? N'hésitez pas à me contacter via ce formulaire ",
+        "fullName" : "Nom complet",
+        "email": "Adresse mail",
+        "message": "Votre message",
+        "send": "Envoyer"
     }
 }
