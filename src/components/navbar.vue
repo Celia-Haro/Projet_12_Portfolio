@@ -134,7 +134,6 @@
 import { ref, onMounted, computed, onUnmounted, nextTick } from "vue";
 import { useI18n } from "vue-i18n";
 
-// Icônes SVG
 import IconSun from "@/assets/img/menu/IconSun.svg";
 import IconMoon from "@/assets/img/menu/IconMoon.svg";
 import IconMenu from "@/assets/img/menu/IconMenu.svg";
