@@ -6,7 +6,7 @@ import svgLoader from 'vite-svg-loader'
 const isProduction = process.env.NODE_ENV === 'production'
 
 export default defineConfig({
-  base: isProduction ? '/portfolio/' : '/',
+  base: isProduction ? '/Projet_12_Portfolio/' : '/',
   plugins: [vue(), svgLoader()],
   resolve: {
     alias: {
