@@ -14,17 +14,11 @@
         class="contact-btn"
         target="_blank"
         rel="noopener">
-        <img
-          src="Projet_12_Portfolio/menu/Iconmail.png"
-          alt="Email Icon"
-          width="32px" />
+        <img :src="Iconmail" alt="Email Icon" width="32px" />
         Email
       </a>
       <a :href="githubUrl" class="contact-btn" target="_blank" rel="noopener">
-        <img
-          src="Projet_12_Portfolio/skills/github.webp"
-          alt="Github Icon"
-          width="32px" />
+        <img :src="githubImg" alt="Github Icon" width="32px" />
         GitHub
       </a>
       <a :href="linkedinUrl" class="contact-btn" target="_blank" rel="noopener">
@@ -39,8 +33,11 @@
 import { useI18n } from "vue-i18n";
 
 import linkedInIcon from "@/assets/img/menu/IconLinkedin.png";
+import Iconmail from "@/assets/img/menu/Iconmail.png";
 
 const { t } = useI18n();
+
+const githubImg = "/Projet_12_Portfolio/skills/github.webp";
 
 const email = "haro.celia@hotmail.fr";
 const githubUrl = "https://github.com/Celia-Haro";
