@@ -1,7 +1,7 @@
 [
     {
         "id": "scraping_keldin",
-        "image": "src/assets/img/projects-detail/scraping-detail.webp",
+        "image": "Projet_12_Portfolio/projects-detail/scraping-detail.webp",
         "category": "work",
         "stack": "Node.js, Puppeteer, Apify",
         "titleKey": "projects.scraping_keldin.title",
@@ -9,8 +9,7 @@
     },
     {
         "id": "portfolio_sophie_bluel",
-        "logo": "src/assets/img/projects-logo/sophiebluel.svg",
-        "image": "src/assets/img/projects-detail/sophiebluel-detail.webp",
+        "image": "Projet_12_Portfolio/projects-detail/sophiebluel-detail.webp",
         "category": "training",
         "stack": "JavaScript, API",
         "titleKey": "projects.portfolio_sophie_bluel.title",
@@ -19,8 +18,7 @@
     },
     {
         "id": "ohmyfood",
-        "logo": "src/assets/img/projects-logo/ohmyfood.svg",
-        "image": "src/assets/img/projects-detail/ohmyfood-detail.webp",
+        "image": "Projet_12_Portfolio/projects-detail/ohmyfood-detail.webp",
         "category": "training",
         "stack": "SASS, mobile-first",
         "titleKey": "projects.ohmyfood.title",
@@ -30,8 +28,7 @@
     },
     {
         "id": "kasa",
-        "logo": "src/assets/img/projects-logo/kasa.svg",
-        "image": "src/assets/img/projects-detail/kasa-detail.webp",
+        "image": "Projet_12_Portfolio/projects-detail/kasa-detail.webp",
         "category": "training",
         "stack": "React",
         "titleKey": "projects.kasa.title",
@@ -40,8 +37,7 @@
     },
     {
         "id": "nina_carducci",
-        "logo": "src/assets/img/projects-logo/ninacarducci.svg",
-        "image": "src/assets/img/projects-detail/ninacarducci-detail.webp",
+        "image": "Projet_12_Portfolio/projects-detail/ninacarducci-detail.webp",
         "category": "training",
         "stack": "SEO, accessibilité",
         "titleKey": "projects.nina_carducci.title",
@@ -51,8 +47,7 @@
     },
     {
         "id": "booki",
-        "logo": "src/assets/img/projects-logo/booki.svg",
-        "image": "src/assets/img/projects-detail/booki-detail.webp",
+        "image": "Projet_12_Portfolio/projects-detail/booki-detail.webp",
         "category": "training",
         "stack": "HTML, CSS",
         "titleKey": "projects.booki.title",
@@ -61,7 +56,7 @@
     },
     {
         "id": "client_keldin",
-        "logo": "src/assets/img/projects-detail/client-detail.png",
+        "logo": "Projet_12_Portfolio/projects-detail/client-detail.png",
         "category": "work",
         "stack": "Vue.js, Node.js, MySQL, librairies front-end",
         "titleKey": "projects.client_keldin.title",
@@ -69,8 +64,7 @@
     },
     {
         "id": "argent_bank",
-        "logo": "src/assets/img/projects-logo/argentbank.svg",
-        "image": "src/assets/img/projects-detail/argentbank-detail.webp",
+        "image": "Projet_12_Portfolio/projects-detail/argentbank-detail.webp",
         "category": "training",
         "stack": "React, Redux",
         "titleKey": "projects.argent_bank.title",

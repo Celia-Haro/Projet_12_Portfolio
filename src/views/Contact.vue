@@ -15,14 +15,14 @@
         target="_blank"
         rel="noopener">
         <img
-          src="/src/assets/img/menu/Iconmail.png"
+          src="Projet_12_Portfolio/menu/Iconmail.png"
           alt="Email Icon"
           width="32px" />
         Email
       </a>
       <a :href="githubUrl" class="contact-btn" target="_blank" rel="noopener">
         <img
-          src="/src/assets/img/skills/github.webp"
+          src="Projet_12_Portfolio/skills/github.webp"
           alt="Github Icon"
           width="32px" />
         GitHub
