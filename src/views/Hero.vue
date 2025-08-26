@@ -1,6 +1,8 @@
 <template>
   <section class="hero">
-    <div class="animation"></div>
+    <div class="animation">
+      <img :src="gearsIcon" alt="Gears Icon" />
+    </div>
     <div class="text-content">
       <h2>{{ t("hero.welcome") }}</h2>
       <h1>{{ t("hero.name") }}</h1>
@@ -12,7 +14,7 @@
 
 <script setup lang="ts">
 import { useI18n } from "vue-i18n";
-
+import gearsIcon from "@/assets/img/background/gearsIcon.svg?url";
 const { t } = useI18n();
 </script>
 
@@ -23,21 +25,28 @@ const { t } = useI18n();
   display: flex;
   flex-direction: column-reverse;
   justify-content: center;
+  align-items: center;
   height: 90vh;
   padding: 1rem;
+  gap: 4rem;
+
   @include tablet {
     flex-direction: row;
   }
 
   .animation {
-    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
     @include tablet {
       width: 30%;
+      display: flex;
     }
     @include desktop {
       width: 40%;
     }
   }
+
   .text-content {
     display: flex;
     flex-direction: column;
@@ -55,8 +64,4 @@ const { t } = useI18n();
     }
   }
 }
-
-//styles mobile : section animation en dessous de text content (  .hero en column-reverse)
-// styles tablette : anim et text content en 30 70 de large
-// style desktop : 40 anim 60 texte
 </style>

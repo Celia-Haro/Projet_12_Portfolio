@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:ns1="http://sozi.baierouge.fr"
+    xmlns:cc="http://creativecommons.org/ns#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+    id="svg2995"
+    sodipodi:docname="aplicacionProyectada.svg"
+    inkscape:export-filename="/home/aztlek/Documentos/IDU/TOGAF IDU/TOGAF IDU V2.0/aplicacionProyectada-48x48.png"
+    viewBox="0 0 48 48"
+    inkscape:export-xdpi="90"
+    version="1.1"
+    inkscape:export-ydpi="90"
+    inkscape:version="0.48.3.1 r9886"
+  >
+  <sodipodi:namedview
+      id="base"
+      bordercolor="#666666"
+      inkscape:pageshadow="2"
+      inkscape:window-y="27"
+      pagecolor="#ffffff"
+      inkscape:window-height="712"
+      inkscape:grid-bbox="true"
+      inkscape:window-maximized="1"
+      inkscape:zoom="11.291667"
+      inkscape:window-x="0"
+      showgrid="true"
+      borderopacity="1.0"
+      inkscape:current-layer="layer1"
+      inkscape:cx="24"
+      inkscape:cy="24"
+      inkscape:window-width="1366"
+      inkscape:pageopacity="0.0"
+      inkscape:document-units="px"
+  />
+  <g
+      id="layer1"
+      inkscape:label="Layer 1"
+      inkscape:groupmode="layer"
+    >
+    <path
+        id="path2989"
+        style="fill:#ff0000"
+        inkscape:connector-curvature="0"
+        d="m14.477 17.899c-0.8272 0-1.639 0.07439-2.4278 0.20885l-0.38506 4.079c-0.81588 0.22743-1.5881 0.54542-2.3104 0.95286l-3.1525-2.604c-1.3315 0.94256-2.497 2.1013-3.4394 3.4329l2.6106 3.1523c-0.407 0.722-0.7321 1.496-0.9595 2.311l-4.0725 0.38506c-0.13454 0.78912-0.20885 1.6004-0.20885 2.4279 0 0.82888 0.073848 1.6374 0.20885 2.4278l4.0725 0.384c0.22739 0.81479 0.55244 1.5889 0.95939 2.3104l-2.604 3.153c0.9407 1.3279 2.0985 2.4922 3.4264 3.4329l3.1588-2.6106c0.72275 0.4078 1.4939 0.73187 2.3104 0.95939l0.38506 4.079c0.78888 0.13447 1.6006 0.20234 2.4278 0.20234s1.6324-0.06786 2.4213-0.20234l0.38506-4.079c0.81647-0.22752 1.5876-0.55159 2.3104-0.95939l3.1588 2.6106c1.3278-0.94074 2.4857-2.105 3.4264-3.4329l-2.6041-3.1523c0.40695-0.72143 0.732-1.4956 0.95939-2.3104l4.0725-0.38508c0.13499-0.79041 0.20885-1.5989 0.20885-2.4278 0-0.82747-0.07432-1.6387-0.20885-2.4279l-4.072-0.385c-0.22739-0.8148-0.55244-1.5889-0.95939-2.3104l2.6106-3.1523c-0.943-1.333-2.109-2.491-3.44-3.434l-3.1523 2.6041c-0.72229-0.40744-1.4945-0.72544-2.3104-0.95286l-0.386-4.079c-0.78888-0.13445-1.5941-0.20885-2.4213-0.20885zm0 8.8825c3.0165 0 5.4561 2.4462 5.4561 5.4627s-2.4396 5.4626-5.4561 5.4626-5.4626-2.4462-5.4626-5.4626c0-3.0165 2.4462-5.4627 5.4626-5.4627z"
+    />
+    <path
+        id="path2985"
+        d="m29.722 1.5887c-0.79544 0.227-1.5556 0.5213-2.2773 0.86707l0.74908 4.0281c-0.722 0.4426-1.377 0.9602-1.96 1.5503l-3.746-1.6391c-1.022 1.2718-1.824 2.7059-2.365 4.2449l3.3754 2.3149c-0.19336 0.8054-0.29349 1.639-0.28856 2.4849l-3.8105 1.4878c0.08718 0.79574 0.23834 1.5963 0.46541 2.392 0.22746 0.79706 0.52035 1.5543 0.86706 2.2773l4.0218-0.74727c0.44225 0.72111 0.96726 1.3763 1.5566 1.9584l-1.6391 3.7458c1.269 1.0188 2.7019 1.8206 4.2369 2.3609l2.3212-3.3772c0.80691 0.19381 1.6374 0.29382 2.4849 0.28855l1.4896 3.8168c0.7955-0.08718 1.5947-0.24468 2.3902-0.47167 0.79544-0.227 1.5511-0.51322 2.2728-0.85902l-0.749-4.029c0.72269-0.44284 1.3753-0.96608 1.9584-1.5566l3.7539 1.6436c1.0187-1.269 1.8126-2.7064 2.3528-4.2414l-3.3691-2.3167c0.19336-0.80541 0.29349-1.639 0.28856-2.4849l3.8105-1.4879c-0.087-0.797-0.237-1.595-0.465-2.392-0.227-0.795-0.521-1.555-0.867-2.2769l-4.022 0.7472c-0.442-0.7211-0.967-1.3763-1.556-1.9584l1.6453-3.7477c-1.272-1.0218-2.71-1.8162-4.249-2.3572l-2.317 3.3691c-0.807-0.1936-1.636-0.2874-2.483-0.2823l-1.4896-3.8168c-0.79549 0.087191-1.5902 0.23662-2.3857 0.46362zm2.4375 8.5415c2.9007-0.82777 5.9179 0.855 6.7457 3.7557 0.82777 2.9007-0.84694 5.9224-3.7476 6.7502-2.9007 0.82777-5.9242-0.85321-6.752-3.7539-0.82778-2.9007 0.85321-5.9242 3.7539-6.752z"
+        style="fill:#550000"
+        inkscape:connector-curvature="0"
+    />
+  </g
+  >
+  <metadata
+    >
+    <rdf:RDF
+      >
+      <cc:Work
+        >
+        <dc:format
+          >image/svg+xml</dc:format
+        >
+        <dc:type
+            rdf:resource="http://purl.org/dc/dcmitype/StillImage"
+        />
+        <cc:license
+            rdf:resource="http://creativecommons.org/licenses/publicdomain/"
+        />
+        <dc:publisher
+          >
+          <cc:Agent
+              rdf:about="http://openclipart.org/"
+            >
+            <dc:title
+              >Openclipart</dc:title
+            >
+          </cc:Agent
+          >
+        </dc:publisher
+        >
+      </cc:Work
+      >
+      <cc:License
+          rdf:about="http://creativecommons.org/licenses/publicdomain/"
+        >
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#Reproduction"
+        />
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#Distribution"
+        />
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#DerivativeWorks"
+        />
+      </cc:License
+      >
+    </rdf:RDF
+    >
+  </metadata
+  >
+</svg
+>

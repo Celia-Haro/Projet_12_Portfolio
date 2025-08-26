@@ -11,7 +11,7 @@
     @focus="setActive(true)"
     @blur="setActive(false)"
     :class="{ active }">
-    <img :src="skill.logo" :alt="skill.titleKey" @error="handleImageError" />
+    <img :src="skill.logo" :alt="skill.titleKey" />
     <div class="skill-overlay">
       <span class="skill-label">{{ skill.titleKey }}</span>
     </div>
@@ -33,11 +33,6 @@ const active = ref(false);
 const setActive = (value: boolean) => {
   active.value = value;
 };
-
-const handleImageError = (event: Event) => {
-  const img = event.target as HTMLImageElement;
-  img.src = "/images/skills/placeholder.svg";
-};
 </script>
 
 <style scoped>
@@ -51,16 +46,15 @@ const handleImageError = (event: Event) => {
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: box-shadow 0.3s ease, transform 0.3s;
+  transition: box-shadow 0.3s ease;
   cursor: pointer;
-  border: none;
   overflow: hidden;
+  border: 1px solid transparent;
 }
 
 .skill-card:focus,
 .skill-card:hover,
 .skill-card.active {
-  transform: translateY(-8px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.13);
   border: 1px solid black;
 }
@@ -70,7 +64,7 @@ const handleImageError = (event: Event) => {
   width: 100%;
   height: 60px;
   object-fit: contain;
-  transition: filter 0.3s ease, opacity 0.3s, transform 0.3s;
+  transition: filter 0.3s ease, opacity 0.3s;
   z-index: 1;
 }
 
@@ -107,6 +101,5 @@ const handleImageError = (event: Event) => {
 .skill-card:hover img,
 .skill-card.active img {
   filter: grayscale(1) brightness(0.6);
-  transform: scale(1.01);
 }
 </style>

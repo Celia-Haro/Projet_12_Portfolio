@@ -49,6 +49,10 @@ const linkedinUrl = "https://www.linkedin.com/in/célia-haro-279641365/";
 
 <style scoped>
 .contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80vh;
   padding: 4rem 0;
   background: var(--bg-color);
   text-align: center;

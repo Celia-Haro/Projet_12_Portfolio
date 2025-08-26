@@ -62,13 +62,12 @@ const { t } = useI18n();
 }
 
 .skills-grid :deep(.skill-card) {
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: box-shadow 0.25s ease;
   border-radius: 12px;
   padding: 1rem;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
 
   &:hover {
-    transform: translateY(-8px) scale(1.05);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
   }
 }
