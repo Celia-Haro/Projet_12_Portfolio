@@ -1,92 +1,92 @@
 [
   {
     "id": "html",
-    "logo": "Projet_12_Portfolio/skills/html-5.webp",
+    "logo": "/Projet_12_Portfolio/skills/html-5.webp",
     "titleKey": "HTML"
   },
   {
     "id": "css",
-    "logo": "Projet_12_Portfolio/skills/css-3.webp",
+    "logo": "/Projet_12_Portfolio/skills/css-3.webp",
     "titleKey": "CSS"
   },
   {
     "id": "javascript",
-    "logo": "Projet_12_Portfolio/skills/javascript.webp",
+    "logo": "/Projet_12_Portfolio/skills/javascript.webp",
     "titleKey": "JavaScript"
   },
   {
     "id": "sass",
-    "logo": "Projet_12_Portfolio/skills/sass.webp",
+    "logo": "/Projet_12_Portfolio/skills/sass.webp",
     "titleKey": "SASS"
   },
   {
     "id": "react",
-    "logo": "Projet_12_Portfolio/skills/react.webp",
+    "logo": "/Projet_12_Portfolio/skills/react.webp",
     "titleKey": "React"
   },
   {
     "id": "redux",
-    "logo": "Projet_12_Portfolio/skills/redux.webp",
+    "logo": "/Projet_12_Portfolio/skills/redux.webp",
     "titleKey": "Redux"
   },
   {
     "id": "vuejs",
-    "logo": "Projet_12_Portfolio/skills/vuejs.png",
+    "logo": "/Projet_12_Portfolio/skills/vuejs.png",
     "titleKey": "Vue.js"
   },
   {
     "id": "primevue",
-    "logo": "Projet_12_Portfolio/skills/primevue.webp",
+    "logo": "/Projet_12_Portfolio/skills/primevue.webp",
     "titleKey": "PrimeVue"
   },
   {
     "id": "nodejs",
-    "logo": "Projet_12_Portfolio/skills/nodejs.png",
+    "logo": "/Projet_12_Portfolio/skills/nodejs.png",
     "titleKey": "Node.js"
   },
   {
     "id": "mysql",
-    "logo": "Projet_12_Portfolio/skills/mysql.webp",
+    "logo": "/Projet_12_Portfolio/skills/mysql.webp",
     "titleKey": "MySQL"
   },
   {
     "id": "git",
-    "logo": "Projet_12_Portfolio/skills/git.webp",
+    "logo": "/Projet_12_Portfolio/skills/git.webp",
     "titleKey": "Git"
   },
   {
     "id": "figma",
-    "logo": "Projet_12_Portfolio/skills/figma.webp",
+    "logo": "/Projet_12_Portfolio/skills/figma.webp",
     "titleKey": "Figma"
   },
   {
     "id": "mongodb",
-    "logo": "Projet_12_Portfolio/skills/mongodb.png",
+    "logo": "/Projet_12_Portfolio/skills/mongodb.png",
     "titleKey": "MongoDB"
   },
    {
     "id": "puppeteer",
-    "logo": "Projet_12_Portfolio/skills/puppeteer.svg",
+    "logo": "/Projet_12_Portfolio/skills/puppeteer.svg",
     "titleKey": "Puppeteer"
   },
    {
     "id": "apify",
-    "logo": "Projet_12_Portfolio/skills/apify.webp",
+    "logo": "/Projet_12_Portfolio/skills/apify.webp",
     "titleKey": "Apify"
   },
    {
     "id": "github",
-    "logo": "Projet_12_Portfolio/skills/github.webp",
+    "logo": "/Projet_12_Portfolio/skills/github.webp",
     "titleKey": "Github"
   },
    {
     "id": "gitlab",
-    "logo": "Projet_12_Portfolio/skills/gitlab.webp",
+    "logo": "/Projet_12_Portfolio/skills/gitlab.webp",
     "titleKey": "Gitlab"
   },
    {
     "id": "agile",
-    "logo": "Projet_12_Portfolio/skills/agile.png",
+    "logo": "/Projet_12_Portfolio/skills/agile.png",
     "titleKey": "Agile"
   }
 ]

@@ -58,9 +58,9 @@ const stackArray = props.project.stack.split(",").map((s) => s.trim());
 const badgeIcon = computed(() => {
   switch (props.project.category) {
     case "work":
-      return "Projet_12_Portfolio/projects-scope/keldin_logo.svg";
+      return "/Projet_12_Portfolio/projects-scope/keldin_logo.svg";
     case "training":
-      return "Projet_12_Portfolio/projects-scope/openclassrooms_logo.webp";
+      return "/Projet_12_Portfolio/projects-scope/openclassrooms_logo.webp";
     default:
       return null;
   }
