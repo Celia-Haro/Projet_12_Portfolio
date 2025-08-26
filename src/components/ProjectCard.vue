@@ -168,7 +168,7 @@ const badgeIcon = computed(() => {
 
 .project-links a {
   padding: 0.4rem 1.1rem;
-  border-radius: 0.75rem;
+  border-radius: 0.5rem;
   font-weight: 600;
   text-decoration: none;
   border: 1px solid var(--main-color);

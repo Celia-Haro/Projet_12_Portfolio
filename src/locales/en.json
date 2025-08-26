@@ -77,39 +77,11 @@
         }
     },
     "skills": {
-        "title": "Skills and Tools",
-        "frontend": [
-            "HTML5",
-            "CSS3",
-            "SASS",
-            "JavaScript",
-            "React",
-            "Redux",
-            "Vue.js"
-        ],
-        "uiLibraries": [
-            "Element Plus",
-            "PrimeVue"
-        ],
-        "backend": [
-            "Node.js",
-            "MySQL (basic)",
-            "MongoDB (basic)"
-        ],
-        "scraping": [
-            "Puppeteer",
-            "Apify"
-        ],
-        "tools": [
-            "Git",
-            "GitHub",
-            "GitLab",
-            "Figma",
-            "Agile"
-        ]
+        "title": "Skills and Tools"
     },
      "contact" : {
         "title": "Contact",
-        "accroche": "You have a project in mind ? Let's bring it to reality together "
+        "accroche": "You have a project in mind ? Let's bring it to reality together ",
+        "inviteContact": " You can contact me by sending an email or with my socials media :"
     }
 }

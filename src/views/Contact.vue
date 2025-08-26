@@ -1,7 +1,12 @@
 <template>
   <section class="contact-section" id="contact">
-    <h2>{{ t("contact.title") }}</h2>
-    <p class="contact-accroche">{{ t("contact.accroche") }}</p>
+    <div class="text-content">
+      <h2>{{ t("contact.title") }}</h2>
+      <p class="contact-accroche">
+        <em>{{ t("contact.accroche") }}</em>
+      </p>
+      <p>{{ t("contact.inviteContact") }}</p>
+    </div>
 
     <div class="contact-buttons">
       <a
@@ -23,10 +28,7 @@
         GitHub
       </a>
       <a :href="linkedinUrl" class="contact-btn" target="_blank" rel="noopener">
-        <img
-          src="/src/assets/img/menu/IconLinkedin.svg"
-          alt="Linkedin Icon"
-          width="32px" />
+        <img :src="linkedInIcon" alt="Linkedin Icon" width="32px" />
         LinkedIn
       </a>
     </div>
@@ -35,6 +37,8 @@
 
 <script setup lang="ts">
 import { useI18n } from "vue-i18n";
+
+import linkedInIcon from "@/assets/img/menu/IconLinkedin.png";
 
 const { t } = useI18n();
 
@@ -51,40 +55,48 @@ const linkedinUrl = "https://www.linkedin.com/in/célia-haro-279641365/";
   font-family: var(--font-family-main);
 }
 
-.contact-section h2 {
-  font-family: var(--font-family-title);
-  font-size: 2.5rem;
-  color: var(--main-color);
-  margin-bottom: 1rem;
-}
-
-.contact-accroche {
-  font-size: 1.2rem;
-  color: var(--main-color);
+.text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   margin-bottom: 2rem;
+
+  h2 {
+    margin-bottom: 3rem;
+  }
+  .contact-accroche {
+    font-size: 1.2rem;
+    font-family: var(--font-family-title);
+    color: var(--main-color);
+  }
 }
 
 .contact-buttons {
   display: flex;
   justify-content: center;
   gap: 1.5rem;
+  margin-bottom: 3rem;
   flex-wrap: wrap;
 }
 
 .contact-btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  border-radius: 2rem;
-  background-color: var(--card-bg);
-  color: white;
-  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  height: fit-content;
+  border-radius: 1rem;
+  background: #fffaf6;
+  color: #353a47;
+  border: 1px solid var(--main-color);
   font-weight: 600;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .contact-btn:hover {
-  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: var(--accent-color);
   transform: translateY(-3px);
 }
 </style>

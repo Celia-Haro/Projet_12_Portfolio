@@ -1,7 +1,7 @@
 <template>
   <div
     class="skill-card"
-    :title="t(skill.titleKey)"
+    :title="skill.titleKey"
     tabindex="0"
     @touchstart="setActive(true)"
     @touchend="setActive(false)"
@@ -11,16 +11,15 @@
     @focus="setActive(true)"
     @blur="setActive(false)"
     :class="{ active }">
-    <img :src="skill.logo" :alt="t(skill.titleKey)" @error="handleImageError" />
+    <img :src="skill.logo" :alt="skill.titleKey" @error="handleImageError" />
     <div class="skill-overlay">
-      <span class="skill-label">{{ t(skill.titleKey) }}</span>
+      <span class="skill-label">{{ skill.titleKey }}</span>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from "vue";
-import { useI18n } from "vue-i18n";
 
 interface Skill {
   id: string;
@@ -29,7 +28,6 @@ interface Skill {
 }
 
 const { skill } = defineProps<{ skill: Skill }>();
-const { t } = useI18n();
 const active = ref(false);
 
 const setActive = (value: boolean) => {

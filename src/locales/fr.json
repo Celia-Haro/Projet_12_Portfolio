@@ -77,43 +77,12 @@
         }
     },
     "skills": {
-        "title": "Compétences et Outils",
-        "frontend": [
-            "HTML5",
-            "CSS3",
-            "SASS",
-            "JavaScript",
-            "React",
-            "Redux",
-            "Vue.js"
-        ],
-        "uiLibraries": [
-            "Element Plus",
-            "PrimeVue"
-        ],
-        "backend": [
-            "Node.js",
-            "MySQL (notions)",
-            "MongoDB (notions)"
-        ],
-        "scraping": [
-            "Puppeteer",
-            "Apify"
-        ],
-        "tools": [
-            "Git",
-            "GitHub",
-            "GitLab",
-            "Figma",
-            "Agile"
-        ]
+        "title": "Compétences et Outils"
+
     },
     "contact" : {
         "title": "Contact",
-        "accroche": "Envie de collaborer ? N'hésitez pas à me contacter par mail ou via mes réseaux ",
-        "fullName" : "Nom complet",
-        "email": "Adresse mail",
-        "message": "Votre message",
-        "send": "Envoyer"
+        "accroche": "Vous avez un projet en tête ? Réalisons-le ensemble ! ",
+        "inviteContact": " Vous pouvez me contacter par mail ou via mes réseaux :"
     }
 }
